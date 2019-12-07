@@ -16,6 +16,9 @@ const useStyles = makeStyles(theme => ({
         padding: 10,
         background: '#b21f66',
         color: ''
+    },
+    typography: {
+        color: '#ffbd69'
     }
 }));
 
@@ -38,16 +41,16 @@ function ProjectsList() {
         <div>
             <Container className={classes.root}>
                 <Paper className={classes.paper}>
-                    <Typography variant="h3">Projects</Typography>
+                    <Typography style={{color: '#fe346e'}} variant="h3">Projects</Typography>
                 </Paper>
                 <Grid container spacing={1}>
                     {projects.map((emily , id) => (
                         <Grid item key={id} xs={12} sm={6} md={3}>
                             <Card className={classes.card}>
-                                <Typography variant="h3">
+                                <Typography className={classes.typography} variant="h3">
                                     {emily.name}
                                 </Typography>
-                                <Typography variant="h4">
+                                <Typography className={classes.typography} variant="h4">
                                     {emily.description}
                                 </Typography>
                             </Card>
